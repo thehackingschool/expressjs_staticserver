@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Interest Calculator</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+<style type="text/css">
+.container
+{
+
+margin-top: 100px;
+margin-left: 500px;
+color: #fff;
+
+}
+body
+{
+
+background-image: url(assets/images/mountains.jpg);
+
+}
+</style>
+
+<script type="text/javascript">
+
+function simpleInterest()
+{		
+
+var principal= document.getElementById('email').value;
+var interest_rate= document.getElementById('inst').value;
+var time= document.getElementById('time').value;
+
+/*console.log(Principal);*/
+
+var interest = (principal*interest_rate*time)/100;
+var result = +principal + +interest;
+document.getElementById('Answer').value = result;
+
+}
+
+
+
+</script>
+</head>
+<body>
+<div class="container">	
+<div class="form-group">
+<label for="email">Principal Amount</label>
+    <input type="text" class="form-control col-md-3" id="email" placeholder="Enter the amount">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Interest</label>
+    <input type="number" class="form-control col-md-3" id="inst" placeholder="Enter the Interest">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Time</label>
+    <input type="number" class="form-control col-md-3" id="time" placeholder="Enter the time in years">
+  </div>
+  <button type="submit" class="btn btn-default" onclick="simpleInterest()">Submit</button><br/>
+  <div class="form-group">
+    <label for="Answer">Answer</label>
+    <input type="text" class="form-control col-md-3" id="Answer" placeholder="Your answer is" disabled="true">
+</div>
+</div>
+</body>
+</html>
